@@ -1,0 +1,42 @@
+[
+    {
+        "type": "Orange markings",
+        "image":  "https://www.cmand.org/tagger/examples/orange12.jpg",
+        "desc": "Orange is a relatively universal utility marking color for sub-surface communications infrastructure. Normally they will indicate the direction of travel for any cables, a provider name, a purpose (i.e. TV), or some combination thereof.\nMisc. items to note as comments: Streetwise orientation of any arrows, if the markings appear to originate or terminate at other findings."
+    },
+    {
+        "type": "Duct markings",
+        "image": "https://www.cmand.org/tagger/examples/duct13.jpg",
+        "desc": "Duct markings are a special subset of orange street markings. They indicate a substreet duct that is likely carrying a group of communications cables.\nLook for a series of the markings in a line (although there may not necessarily be more than one)\nMisc. items to note as comments: Size and streetwise orientation of duct, if the markings appear to originate or terminate at other findings."
+    },
+    {
+        "type": "Manholes",
+        "image": "https://www.cmand.org/tagger/examples/man12.jpg",
+        "desc": "While the majority of manholes in an urban area are for sewer access (marked 'S' or 'SEWER'), almost half in some locations are for telecom providers to access equipment.\nTo identify telecom manholes, look for a provider name or keywords such as \"Comms\" stamped in the center. Many telecom manholes also bear a distinct honeycomb pattern.\nMisc. items to note as comments: Anything unusual or noteworthy. Most manholes will not require extra comments."
+    },
+    {
+        "type": "Handholes",
+        "image": "https://www.cmand.org/tagger/examples/hand12.jpg",
+        "desc": "Handholes are a smaller version of manholes that are also used to access a variety of underground equipment. Normally they will be found on sidewalks vice in the street.\nLike manholes, look for a provider name or keyword to differentiate them from other services.\nMisc. items to note as comments: Anything unusual or noteworthy. Most handholes will not require extra comments."
+    },
+    {
+        "type": "Dig Warnings",
+        "image": "https://www.cmand.org/tagger/examples/digw12.jpg",
+        "desc": "Underground equipment is frequently marked by providers to warn others of its presence before digging.\nWhile some signs are standalone, most will be on green utility boxes next to roads.\nAs always, telecom specific warnings will be orange and labeled with the provider name.\nMisc. items to note as comments: Anything unusual or noteworthy. Most dig warnings will not require extra comments."
+    },
+    {
+        "type": "Cell tower",
+        "image": "https://assets.dnainfo.com/photo/2016/10/1475526180-275665/extralarge.jpg",
+        "desc": "Look for antennas specifically marked as cell towers.\nCell towers will frequently have telecom cable access points (such as fiber handholes) in the nearby vicinity.\nMisc items to note as comments: Proximity to other telecom infrastructure."
+    },
+    {
+        "type": "Utility pole",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Utility_pole_transformers.jpg/1200px-Utility_pole_transformers.jpg",
+        "desc": "A utility pole is a column or post used to support overhead power lines and various other public utilities, such as electrical cable, fiber optic cable, and related equipment such as transformers and street lights."
+    },
+    {
+        "type": "Fiber Distribution Interface (FDI) cabinet",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/1200_pair_SAI.jpg/1024px-1200_pair_SAI.jpg",
+        "desc": "An FDI cabinet/enclosure is used to store fiber optic cable splices for fiber optic cables that were installed before other houses or buildings in the area were constructed."
+    }
+]

@@ -1,20 +1,31 @@
 const express = require('express')
 const app = express()
+const fs = require('fs')
 
 const { writeToCsv } = require("./utils/csvHelper")
 
-// To parse URL encoded data
+/* To parse URL encoded data */
 app.use(express.urlencoded({ extended: true }))
 
-// To parse json data
+/* To parse json data */
 app.use(express.json())
+app.set("json spaces", 40);
 
-// Test route
+/* Test route */
 app.get('/', (_, res) => {
     res.send('Hello World!')
 })
 
-// Submission route
+/* Get examples */
+app.get('/examples', (_, res) => {
+    const examples = JSON.parse(fs.readFileSync('examples.json'))
+    res.status(200).json({
+        statusCode: 200,
+        examples
+    });
+})
+
+/* Submission route */
 app.post('/submit', async (req, res) => {
     const submissionTime = new Date()
     const { 
@@ -53,9 +64,9 @@ app.post('/submit', async (req, res) => {
     }
 });
 
-// Invalid URL
+/* Invalid URL */
 app.get('*', (_, res) => {
-    res.send("404: URL not found")
+    res.status(404).send("404: URL not found")
 });
 
 app.listen(8080, () => {
