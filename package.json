@@ -1,0 +1,16 @@
+{
+  "name": "netmapper_api",
+  "version": "1.0.0",
+  "description": "NetMapper's API for data submission",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "SonHoang Pham",
+  "license": "ISC",
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "express": "^4.17.1"
+  }
+}
