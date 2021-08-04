@@ -35,7 +35,7 @@
         "desc": "A utility pole is a column or post used to support overhead power lines and various other public utilities, such as electrical cable, fiber optic cable, and related equipment such as transformers and street lights."
     },
     {
-        "type": "Fiber Distribution Interface (FDI) cabinet",
+        "type": "FDI cabinet",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/1200_pair_SAI.jpg/1024px-1200_pair_SAI.jpg",
         "desc": "An FDI cabinet/enclosure is used to store fiber optic cable splices for fiber optic cables that were installed before other houses or buildings in the area were constructed."
     }

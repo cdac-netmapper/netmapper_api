@@ -6,12 +6,12 @@ const SUBMISSION_FILE = "./submissions.csv"
 const submissionsWriter = createCsvWriter({
     path: SUBMISSION_FILE,
     header: [
-        {id: 'type', name: "Type of network infrastucture"},
-        {id: 'image', name: "Image"},
-        {id: 'long', name: "Longitude"},
-        {id: 'lat', name: "Latitude"},
-        {id: 'desc', name: "Descriptive information"},
-        {id: 'comment', name: "Comment"},
+        {id: 'type', title: "Network element"},
+        {id: 'image', title: "Image"},
+        {id: 'long', title: "Longitude"},
+        {id: 'lat', title: "Latitude"},
+        {id: 'desc', title: "Descriptive information"},
+        {id: 'comment', title: "Comment"},
         {id: 'submittedAt', name: "Submitted at"}
     ],
     append: fs.existsSync(SUBMISSION_FILE)  // appends if file exists
