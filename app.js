@@ -33,6 +33,7 @@ app.post('/submit', async (req, res) => {
         desc, 
         comment,
         image,
+        originalImage,
         long,
         lat
     } = req.body
@@ -42,6 +43,7 @@ app.post('/submit', async (req, res) => {
             desc,
             comment,
             image,
+            originalImage,
             long,
             lat,
             submittedAt: submissionTime.toUTCString()

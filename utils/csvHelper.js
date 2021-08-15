@@ -8,6 +8,7 @@ const submissionsWriter = createCsvWriter({
     header: [
         {id: 'type', title: "Network element"},
         {id: 'image', title: "Image"},
+        {id: 'originalImage', title: "Original Image"},
         {id: 'long', title: "Longitude"},
         {id: 'lat', title: "Latitude"},
         {id: 'desc', title: "Descriptive information"},
