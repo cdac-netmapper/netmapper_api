@@ -6,6 +6,7 @@ const SUBMISSION_FILE = "./submissions.csv"
 const submissionsWriter = createCsvWriter({
     path: SUBMISSION_FILE,
     header: [
+        {id: 'device', title: "Device ID"},
         {id: 'type', title: "Network element"},
         {id: 'image', title: "Image"},
         {id: 'originalImage', title: "Original Image"},
