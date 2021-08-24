@@ -1,7 +1,6 @@
 const express = require("express")
 const app = express()
 const axios = require("axios").default
-const { exec } = require("child_process")
 const fs = require("fs")
 const util = require("util")
 const readFile = util.promisify(fs.readFile)
@@ -9,7 +8,6 @@ const openFile = util.promisify(fs.open)
 const closeFile = util.promisify(fs.close)
 const writeFile = util.promisify(fs.writeFile)
 const deleteFile = util.promisify(fs.unlink)
-const execCmd = util.promisify(exec)
 const { writeToCsv } = require("./utils/csvHelper")
 
 const apiUrl =
@@ -83,16 +81,19 @@ app.post("/submit", async (req, res, next) => {
       console.log("message: ", message)
       console.log("Pre-signed URL: ", url)
       // PUT request to upload file to Pre-signed S3 URL
-      const { stdout, stderr } = await execCmd(
-        `curl -X PUT -T ${input.file} \'${url}\' -v`
-      )
-      console.log("stdout: ", stdout)
-      console.log("stderr: ", stderr)
+      const jsonFile = await readFile(input.file)
+      const resp = await axios.put(url, jsonFile)
+      // const { stdout, stderr } = await execCmd(
+      //   `curl -X PUT -T ${input.file} \'${url}\' -v`
+      // )
+      // console.log("stdout: ", stdout)
+      // console.log("stderr: ", stderr)
+      console.log("presigned url resp: ", resp)
       // Delete file on completion
       await deleteFile(input.file)
       
       const response = {
-        statusCode: status,
+        statusCode: resp.status,
         message: `Submitted at ${submissionTime.toUTCString()}`,
       }
       res.status(200).json(response)
