@@ -11,7 +11,7 @@ const deleteFile = util.promisify(fs.unlink)
 const { writeToCsv } = require("./utils/csvHelper")
 
 const apiUrl =
-  "https://3ccbm8fqq6.execute-api.us-east-2.amazonaws.com/nm/upload-mngd/"
+  "https://nj9e9lamz3.execute-api.us-east-2.amazonaws.com/nm/upload-mngd/";
 const challenge =
   "ee07111f94cdb8b0955590b63a71c33e197c2ace6d2b7903b12a7ca35bba1a80" //managed1
 
